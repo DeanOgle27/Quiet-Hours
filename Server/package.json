@@ -1,0 +1,16 @@
+{
+  "name": "make-ohio-app",
+  "version": "1.0.0",
+  "description": "Make OHI/O Project",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "mustache": "^3.0.1"
+  }
+}

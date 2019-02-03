@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- JT Thrash 2019 -->
+  <title>Quiet Hours by SOLUTI/ON</title>
+  <link rel="icon" href="https://vishanand.com/IMG/Clock.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  
+  h1{
+  font: 50px Montserrat, comicsans;
+    line-height: 1;
+    color: white;
+  }
+  
+  
+  
+  label{
+  font: 20px Montserrat, comicsans;
+    line-height: 1.5;
+    color: black;
+  }
+  
+  p{
+  font: 16px Montserrat, comicsans;
+  color: black;
+  
+  }
+  
+  .slidecontainer {
+    text-align: center;   
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #1abc9c;
+  cursor: pointer;
+}
+
+.btn-primary{
+
+background-color: #1abc9c;
+border: none;
+color: white;
+
+}
+
+
+  
+  </style>
+</head>
+<body>
+
+
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <a href="/log"><h2 class="margin">Quiet Hours by SOLUTI/ON</h2></a>
+  <img src="https://vishanand.com/IMG/QuietHours.png" class="w3-card-4" style="display:inline" alt="Bird" width="200" height="200">
+  
+  
+  <h3>Settings Panel</h3>
+</div>
+
+
+
+
+<div class="slidecontainer">
+  
+  <form action="/submitSettings" method="GET">
+    <label for="myRange">Volume Threshold</label>
+    <input type="range" min = "200" max = "800" class = "slider" id="myRange" name="threshold" value={{threshold}}>
+    <p>Value: <span id = "value"></span></p>
+    
+    <label for="botid">Bot ID</label>
+    <input type="text" class="form-control" id="botId" name = "bot" value="{{botId}}">
+    
+    <label for="deviceid">Device ID</label>
+    <input type="text" class="form-control" id="deviceId" name = "deviceId" value="{{deviceId}}">
+    
+    <label for="theTime">Waiting Time</label>
+    <input type="number" min=30 max=3600 class="form-control" id="theTime" name = "time" value="{{theTime}}">
+    
+    <label for="warningMessages">Warning Messages</label>
+    <textarea rows = "10" cols = "50" class="form-control" id="warningMessages" name = "warnings">{{warningMessages}}</textarea>
+    <input type="checkbox" class="custom-control-input" name="checkBox" value="{{checkbox}}" checked="true">
+    <label class="custom-control-label" for="defaultUnchecked">Warnings Enabled</label>
+
+    <p></p>
+    <p><button type="submit" class="btn btn-primary" data-rel="back">Submit</button></p>
+  </form>
+</div>
+
+
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("value");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>
+
