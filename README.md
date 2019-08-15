@@ -1,5 +1,5 @@
-# Quiet Hours by Team SOLUTI/ON:
-Vish Anand, Dean Ogle, [Noah Sediqe](https://github.com/NoahSediqe), & JT Thrash
+# Quiet Hours by Team SOLUTI/ON (Feb 2-3, 2019)
+[Vish Anand](https://www.vishanand.com), [Dean Ogle](https://github.com/DeanBrogle), [Noah Sediqe](https://github.com/NoahSediqe), & [JT Thrash](https://github.com/JT-Thrash)
 
 [Presentation Given at the OSU MakeOHI/O Hackathon](https://drive.google.com/file/d/1Gth503BGLpS9QvUULUKfwbs327lDW-KX/view?usp=sharing)
 
