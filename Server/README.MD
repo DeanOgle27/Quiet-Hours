@@ -7,4 +7,4 @@ script.js is the main server code in Node.js, loop.sh is a shell file that runs 
 
 settingsTemplate.html is the settings webpage in HTML and CSS (JT Thrash)
 
-Clock.png and QuietHours.png are project logos (Noah Sedique & JT Thrash)
+Clock.png and QuietHours.png are project logos (Noah Sediqe & JT Thrash)
